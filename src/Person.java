@@ -46,13 +46,13 @@ public class Person {
 	}
 	
 	public void inputInfo(Scanner sc) {
-		System.out.println("Name = ");
+		System.out.print("Name = ");
 		this.name = sc.nextLine();
-		System.out.println("Gender = ");
+		System.out.print("Gender = ");
 		this.gender = sc.nextLine();
-		System.out.println("Date = ");
+		System.out.print("Date = ");
 		this.name = sc.nextLine();
-		System.out.println("Address = ");
+		System.out.print("Address = ");
 		this.address = sc.nextLine();
 	}
 

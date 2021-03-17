@@ -47,22 +47,56 @@ public class Student extends Person {
 	public void inputInfo(Scanner sc) {
 		// TODO Auto-generated method stub
 		super.inputInfo(sc);
-		System.out.println("Student ID = ");
-		this.studentID = sc.nextLine();
-		System.out.println("Average = ");
-		this.average = sc.nextDouble();
-		System.out.println("Email = ");
-		sc.next();
-		this.email = sc.nextLine();
+		
+		do {
+			System.out.print("Student ID = ");
+			this.studentID = sc.nextLine();
+		}while(!checkStudentID(this.studentID));
+		
+		do {
+			System.out.print("Average = ");
+			this.average = sc.nextDouble();
+		}while(!checkAverage(this.average));
+		//sc.next();
+		do {
+			System.out.print("Email = ");
+			this.email = sc.next();
+		}while(!checkEmail(this.email));
 	}
 	
 	@Override
 	public String showInfo() {
 		// TODO Auto-generated method stub
-		return "Student ["+super.showInfo() +"studentID=" + studentID + ", average=" + average + ", email=" + email + "]" ;
+		return "Student [, " +super.showInfo() +"studentID=" + studentID + ", average=" + average + ", email=" + email + "]" ;
 	}
 
+	private boolean checkStudentID(String studentID) {
+		if(studentID.length()>8 || studentID.length()<8) {
+			System.out.println("StudentID must have to 8 digits. Please try again!");
+			return false;
+		}
+		return true;
+	}
 	
+	private boolean checkAverage(Double average) {
+		if(average<0 || average >10) {
+			System.out.println("Average must have in range(0.0-10.0). Please try again!");
+			return false;
+		}
+		return true;
+	}
+	
+	private boolean checkEmail(String email) {
+		if(!email.contains("@")) {
+			System.out.println("StudentID must have to contain '@' digit. Please try again!");
+			return false;
+		}
+		if(email.contains(" ")) {
+			System.out.println("StudentID must have not to contain ' ' digit. Please try again!");
+			return false;
+		}
+		return true;
+	}
 	
 	
 
