@@ -57,7 +57,7 @@ public class Student extends Person {
 			System.out.print("Average = ");
 			this.average = sc.nextDouble();
 		}while(!checkAverage(this.average));
-		//sc.next();
+	
 		do {
 			System.out.print("Email = ");
 			this.email = sc.next();
@@ -96,6 +96,13 @@ public class Student extends Person {
 			return false;
 		}
 		return true;
+	}
+	
+	
+	private boolean isScholarship(Double average) {
+		if(average > 8)
+		return true;
+		return false;
 	}
 	
 	
