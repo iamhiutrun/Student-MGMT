@@ -67,7 +67,7 @@ public class Student extends Person {
 	@Override
 	public String showInfo() {
 		// TODO Auto-generated method stub
-		return "Student [, " +super.showInfo() +"studentID=" + studentID + ", average=" + average + ", email=" + email + "]" ;
+		return "Student [" +super.showInfo() +"studentID=" + studentID + ", average=" + average + ", email=" + email + "]" ;
 	}
 
 	private boolean checkStudentID(String studentID) {
@@ -99,8 +99,8 @@ public class Student extends Person {
 	}
 	
 	
-	private boolean isScholarship(Double average) {
-		if(average > 8)
+	public boolean isScholarship() {
+		if(this.average > 8)
 		return true;
 		return false;
 	}
