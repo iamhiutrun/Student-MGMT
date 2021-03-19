@@ -84,7 +84,7 @@ public class StudentTest {
 				Collections.sort(studentList, new Comparator<Student>() {
 					@Override
 					public int compare(Student o1, Student o2) {
-						return o2.getName().compareTo(o1.getName());
+						return o1.getName().compareTo(o2.getName());
 					}
 				});
 				for (Student student : studentList) {
@@ -92,6 +92,13 @@ public class StudentTest {
 				}
 				break;
 			case 6:
+				Collections.sort(studentList,new Comparator<Student>() {
+					@Override
+					public int compare(Student o1, Student o2) {
+						return o2.getAverage().compareTo(o1.getAverage());
+					}
+					
+				});
 				System.out.println("SINH VIEN DAT HOC BONG:");
 				for (Student student : studentList) {
 					if(student.isScholarship()) {

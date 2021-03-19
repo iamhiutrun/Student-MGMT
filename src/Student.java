@@ -64,10 +64,14 @@ public class Student extends Person {
 		}while(!checkEmail(this.email));
 	}
 	
+	
+	
+
 	@Override
 	public String showInfo() {
-		// TODO Auto-generated method stub
-		return "Student [" +super.showInfo() +"studentID=" + studentID + ", average=" + average + ", email=" + email + "]" ;
+		return "Student [Name()=" + getName() + ", Gender()=" + getGender() + ", Date()=" + getDate()
+				+ ", Address()=" + getAddress() + ", studentID=" + studentID + ", average=" + average + ", email="
+				+ email + "]";
 	}
 
 	private boolean checkStudentID(String studentID) {

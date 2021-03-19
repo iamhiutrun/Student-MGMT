@@ -61,4 +61,7 @@ public class Person {
 		return "Person [name=" + name + ", gender=" + gender + ", date=" + date + ", address=" + address + "]";
 	}
 
+
+	
+
 }
