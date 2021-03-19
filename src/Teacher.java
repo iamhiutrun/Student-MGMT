@@ -7,14 +7,13 @@ public class Teacher extends Person {
 	private Double hour;
 	
 	public Teacher() {
-		// TODO Auto-generated constructor stub
 	}
 
-	public Teacher(String name, String gender, String date, String address, String classNo, Double hour) {
+	public Teacher(String name, String gender, String date, String address, String classNo,Double wage, Double hour) {
 		super(name, gender, date, address);
 		this.classNo = classNo;
 		this.hour = hour;
-		this.wage = getWage();
+		this.wage = wage;
 	}
 
 	public String getClassNo() {
@@ -26,12 +25,6 @@ public class Teacher extends Person {
 	}
 
 	public Double getWage() {
-		char key = classNo.charAt(classNo.length()-1);
-		if(key == 'G'|| key == 'H'||key == 'I'||key == 'K') {
-			
-		}else {
-			
-		}
 		return wage;
 	}
 
@@ -58,14 +51,22 @@ public class Teacher extends Person {
 		hour = sc.nextDouble();
 	}
 
-
 	@Override
-	public String toString() {
+	public String showInfo() {
 		return "Teacher [ClassNo()=" + getClassNo() + ", Wage()=" + getWage() + ", Hour()=" + getHour()
 				+ ", Name()=" + getName() + ", Gender()=" + getGender() + ", Date()=" + getDate()
 				+ ", Address()=" + getAddress() + "]";
 	}
 
-	
+	public Double getIncome() {
+		Double income = 0.0;
+		char key = classNo.charAt(classNo.length()-1);
+		if(key == 'G'|| key == 'H'||key == 'I'||key == 'K') {
+			income = wage*hour;
+		}else {
+			income = wage*hour + 200000;
+		}
+		return income;
+	}
 	
 }

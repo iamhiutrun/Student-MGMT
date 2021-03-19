@@ -51,7 +51,7 @@ public class Person {
 		System.out.print("Gender = ");
 		this.gender = sc.nextLine();
 		System.out.print("Date = ");
-		this.name = sc.nextLine();
+		this.date = sc.nextLine();
 		System.out.print("Address = ");
 		this.address = sc.nextLine();
 	}
