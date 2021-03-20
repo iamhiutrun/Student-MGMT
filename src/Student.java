@@ -58,9 +58,10 @@ public class Student extends Person {
 			this.average = sc.nextDouble();
 		}while(!checkAverage(this.average));
 	
+		sc.nextLine();
 		do {
 			System.out.print("Email = ");
-			this.email = sc.next();
+			this.email = sc.nextLine();
 		}while(!checkEmail(this.email));
 	}
 	

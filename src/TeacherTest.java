@@ -54,7 +54,8 @@ public class TeacherTest {
 						return o2.getIncome().compareTo(o1.getIncome());
 					}
 				});
-				System.out.println("Giang vien co luong cao nhat la "+teacherList.get(0));
+				System.out.println("Giang vien co luong cao nhat la");
+				System.out.println(teacherList.get(0).showInfo());
 				break;
 			default:
 				break;
